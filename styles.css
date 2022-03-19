@@ -1,18 +1,16 @@
 .section_container {
-  position: relative;
+  display: grid;
+  place-items: center;
   max-width: 100vw;
   min-height: 100vh;
   height: 100%;
   background-color: var(--very-dark-blue-main-bg);
+  padding: 1rem;
 }
 
 .card_container {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   height: auto;
-  width: 350px;
+  max-width: 350px;
   padding: 1rem;
   background-color: var(--very-dark-blue-card-bg);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
@@ -21,14 +19,11 @@
 
 .card_wrapper .img_wrapper {
   position: relative;
-  /* max-width: 300px; */
   width: 100%;
   height: auto;
   margin-bottom: 1rem;
 
   cursor: pointer;
-
-  z-index: 1;
 }
 
 .card_wrapper .img_wrapper #nft_image {
@@ -65,12 +60,14 @@
   margin-bottom: 1rem;
   font-weight: 300;
   color: var(--soft-blue);
+  width: 100%;
 }
 
 .card_wrapper .price_and_time_wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .price_and_time_wrapper span {
@@ -93,6 +90,7 @@
 
 .created_by {
   padding: 1rem 0;
+  width: 100%;
   margin-top: 1rem;
   display: flex;
   justify-content: flex-start;
@@ -123,12 +121,23 @@
   color: var(--cyan);
 }
 
+#footer_description {
+  width: 100%;
+
+  margin: 1rem 0;
+  padding: 0 1rem;
+
+  color: var(--soft-blue);
+  text-align: center;
+  font-weight: 300;
+}
+
+#footer_description strong {
+  font-weight: 400;
+}
+
 @media screen and (max-width: 375px) {
   .card_container {
     max-width: 300px;
-  }
-
-  .created_by {
-    /* justify-content: space-between; */
   }
 }

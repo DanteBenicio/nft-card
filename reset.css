@@ -9,8 +9,24 @@ p {
   font-size: clamp(1rem, 5vw, 1.2rem);
 }
 
-h1, strong {
+body {
+  position: relative;
+}
+
+h1, a {
+  color: var(--white);
   cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 400;
+}
+
+h1:hover,
+a:hover {
+  transition: color 0.2s linear;
+  color: var(--cyan);
 }
 
 :root {
@@ -32,4 +48,5 @@ h1, strong {
 html, body {
   max-width: 100vw;
   min-height: 100vh;
+  height: 100%;
 }
