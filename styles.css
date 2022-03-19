@@ -1,3 +1,5 @@
+@import url('./reset.css');
+
 .section_container {
   display: grid;
   place-items: center;
@@ -39,7 +41,7 @@
   top: 0;
   width: 100%;
   height: 99%;
-  background: url(assets/icon-view.svg);
+  background: url(icon-view.svg); /* add 'assets/icon-view.svg' on development */
   background-repeat: no-repeat;
   background-position: center;
   background-color: var(--cyan-card);
