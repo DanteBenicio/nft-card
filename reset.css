@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+:root {
+  /** primary colors */
+
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+
+  /*& secondary colors */
+
+  --very-dark-blue-main-bg: hsl(217, 54%, 11%); /* Main Bg */
+  --very-dark-blue-card-bg: hsl(216, 50%, 16%); /* Card Bg */
+  --very-dark-blue-line: hsl(215, 32%, 27%); /* Line bg */
+  --white: hsl(0, 0%, 100%);
+}
+
+html, body {
+  max-width: 100vw;
+  min-height: 100vh;
+}
