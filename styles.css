@@ -27,12 +27,13 @@
 }
 
 .card_wrapper .img_wrapper #nft_image {
+  transition: all 0.2s ease;
   object-fit: cover;
   width: 100%;
   border-radius: 0.5rem;
 }
 
-.card_wrapper .img_wrapper:hover::before {
+.card_wrapper .img_wrapper:hover::before {  
   content: '';
   position: absolute;
   top: 0;
@@ -43,6 +44,12 @@
   background-position: center;
   background-color: var(--cyan-card);
   border-radius: 0.5rem;
+}
+
+.card_wrapper .img_wrapper:active #nft_image {
+  transition: all 0.3s ease;
+  position: absolute;
+  transform: scale(1.5);
 }
 
 .card_wrapper #nft_title {
@@ -136,8 +143,18 @@
   font-weight: 400;
 }
 
+@media screen and (max-width: 490px) {
+  .card_container .img_wrapper:active #nft_image {
+    transform: scale(1.2);
+  }
+}
+
 @media screen and (max-width: 375px) {
   .card_container {
     max-width: 300px;
+  }
+
+  .card_container .img_wrapper:active #nft_image {
+    top: -1rem;
   }
 }
