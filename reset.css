@@ -6,7 +6,11 @@
 }
 
 p {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 5vw, 1.2rem);
+}
+
+h1, strong {
+  cursor: pointer;
 }
 
 :root {
@@ -14,6 +18,8 @@ p {
 
   --soft-blue: hsl(215, 51%, 70%);
   --cyan: hsl(178, 100%, 50%);
+  --cyan-card: hsla(178, 100%, 50%, 0.514);
+
 
   /*& secondary colors */
 

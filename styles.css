@@ -1,5 +1,134 @@
 .section_container {
+  position: relative;
   max-width: 100vw;
   min-height: 100vh;
+  height: 100%;
   background-color: var(--very-dark-blue-main-bg);
+}
+
+.card_container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: auto;
+  width: 350px;
+  padding: 1rem;
+  background-color: var(--very-dark-blue-card-bg);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+}
+
+.card_wrapper .img_wrapper {
+  position: relative;
+  /* max-width: 300px; */
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+
+  cursor: pointer;
+
+  z-index: 1;
+}
+
+.card_wrapper .img_wrapper #nft_image {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.card_wrapper .img_wrapper:hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 99%;
+  background: url(assets/icon-view.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--cyan-card);
+  border-radius: 0.5rem;
+}
+
+.card_wrapper #nft_title {
+  color: var(--white);
+  margin-bottom: 1rem;
+
+  transition: color 0.2s linear;
+}
+
+.card_wrapper #nft_title:hover {
+  color: var(--cyan);
+}
+
+.card_wrapper #nft_description {
+  margin-bottom: 1rem;
+  font-weight: 300;
+  color: var(--soft-blue);
+}
+
+.card_wrapper .price_and_time_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price_and_time_wrapper span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 400;
+}
+
+.price_and_time_wrapper #nft_price {
+  color: var(--cyan);
+  font-weight: 600;
+}
+
+.price_and_time_wrapper #days {
+  color: var(--soft-blue);
+  font-weight: 400;
+}
+
+.created_by {
+  padding: 1rem 0;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  border-top: 1px solid var(--very-dark-blue-line);
+}
+
+.created_by #avatar_image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--white);
+}
+
+.created_by p {
+  font-weight: 400;
+  color: var(--soft-blue);
+}
+
+.created_by p strong {
+  color: var(--white);
+  font-weight: 400;
+  transition: color 0.2s linear;
+}
+
+.created_by p:hover strong {
+  color: var(--cyan);
+}
+
+@media screen and (max-width: 375px) {
+  .card_container {
+    max-width: 300px;
+  }
+
+  .created_by {
+    /* justify-content: space-between; */
+  }
 }
