@@ -5,13 +5,11 @@
   place-items: center;
   max-width: 100vw;
   min-height: 100vh;
-  height: 100%;
   background-color: var(--very-dark-blue-main-bg);
   padding: 1rem;
 }
 
 .card_container {
-  height: auto;
   max-width: 350px;
   padding: 1rem;
   background-color: var(--very-dark-blue-card-bg);
