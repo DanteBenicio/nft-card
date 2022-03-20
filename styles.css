@@ -68,6 +68,7 @@
   font-weight: 300;
   color: var(--soft-blue);
   width: 100%;
+  font-size: clamp(1rem, 5vw, 1.2rem);
 }
 
 .card_wrapper .price_and_time_wrapper {
@@ -114,6 +115,7 @@
 }
 
 .created_by p {
+  font-size: clamp(0.4rem, 5vw, 1.2rem);
   font-weight: 400;
   color: var(--soft-blue);
 }
@@ -132,11 +134,11 @@
   width: 100%;
 
   margin: 1rem 0;
-  padding: 0 1rem;
 
   color: var(--soft-blue);
   text-align: center;
   font-weight: 300;
+  font-size: clamp(0.5rem, 4vw, 1rem);
 }
 
 #footer_description strong {
@@ -150,10 +152,6 @@
 }
 
 @media screen and (max-width: 375px) {
-  .card_container {
-    max-width: 300px;
-  }
-
   .card_container .img_wrapper:active #nft_image {
     top: -1rem;
   }
