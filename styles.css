@@ -45,8 +45,12 @@
   background-color: var(--cyan-card);
   border-radius: 0.5rem;
 }
-
+/* 
 .card_wrapper .img_wrapper:active #nft_image {
+
+} */
+
+.img_wrapper #nft_image.clicked {
   transition: all 0.3s ease;
   position: absolute;
   transform: scale(1.5);
@@ -146,13 +150,13 @@
 }
 
 @media screen and (max-width: 490px) {
-  .card_container .img_wrapper:active #nft_image {
+  .img_wrapper #nft_image.clicked {
     transform: scale(1.2);
   }
 }
 
 @media screen and (max-width: 375px) {
-  .card_container .img_wrapper:active #nft_image {
+  .img_wrapper #nft_image.clicked {
     top: -1rem;
   }
 }
