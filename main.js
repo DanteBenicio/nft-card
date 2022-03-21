@@ -4,7 +4,6 @@ const body = document.querySelector('body')
 
 imageWrapper.addEventListener('click', e => {
   image.classList.toggle('clicked')
-  console.log(e.currentTarget)
 })
 
 body.addEventListener('click', e => {
